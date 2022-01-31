@@ -12,8 +12,8 @@ util.AddNetworkString("PAM_UnVoteRTV")
 util.AddNetworkString("PAM_ResetRTV")
 
 local setting_namespace = PAM.setting_namespace:AddChild(name)
-local delayed_setting = setting_namespace:AddSetting("delayed", pacoman.TYPE_BOOLEAN, false)
-local percentage_setting = setting_namespace:AddSetting("percentage", pacoman.TYPE_PERCENTAGE, 0.6)
+local delayed_setting = setting_namespace:AddSetting("delayed", pacoman.TYPE_BOOLEAN, false, "Delay the vote to the end of the round.")
+local percentage_setting = setting_namespace:AddSetting("percentage", pacoman.TYPE_PERCENTAGE, 0.6, "The percentage of players needed for a vote to start.")
 local enabled_setting
 
 -- stores the players wanting to rock the vote

@@ -10,7 +10,7 @@ local rtv_voters = {}
 local rtv_voter_count = 0
 
 local setting_namespace = PAM.setting_namespace:AddChild(name)
-local commands_setting = setting_namespace:AddSetting("commands", pacoman.TYPE_STRING, "!rtv,rtv,!rock the vote,rock the vote")
+local commands_setting = setting_namespace:AddSetting("commands", pacoman.TYPE_STRING, "!rtv,rtv,!rock the vote,rock the vote", "Write any of these commands in chat to vote for rtv.")
 local enabled_setting
 local rtv_enabled_setting
 local rtv_percentage_setting
