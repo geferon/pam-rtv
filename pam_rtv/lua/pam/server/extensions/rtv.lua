@@ -41,7 +41,7 @@ local function AddRTVVoter(ply)
 	net.WriteEntity(ply)
 	net.Broadcast()
 
-	if IsEnoughVoters() and not delayed_setting:GetActiveValue() then
+	if IsEnoughVoters() and (not delayed_setting:GetActiveValue() or not PAM.extension_handler.RunReturningEvent("IsRoundBased")) then
 		PAM.Start()
 	end
 
